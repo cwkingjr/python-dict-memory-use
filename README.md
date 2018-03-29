@@ -1,0 +1,3 @@
+# Python Dictionary Memory Use
+
+Eval the impact of using a dictionary for long-running record storage and deletion. From what I've read, the dictionary (hash table) will not clean up deletions since those slots may be used in links to other hash locations. Currently, I work with a project that uses a dictionary to store and dispose of ~50M+ records per day, in a daemon process. This project is to attempt to have a look at the potential impact of this dict usage to see what the overall impact of memory use is and to inform whether we should take mitigating actions to prevent ever-growing memory consumption.
